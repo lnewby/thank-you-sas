@@ -1,0 +1,188 @@
+/**************** 
+ * Html el styles
+ ****************/
+ body, html {
+    height: 100%;
+}
+a:link {
+    text-decoration: none;
+}
+button:hover {
+    color: #fff;
+    background-color: #2976e9;
+}
+button {
+    font-family: 'Fira Code', monospace;
+    /* color: #fff; */
+    background-color: transparent;
+    margin: .25rem .125rem;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/***************
+ * ID styles
+ ***************/
+#game-canvas {
+    border:1px solid #0a80ff;
+}
+#brief-msg {
+    /* font-size: 1.2em; */
+    width: 600px;
+    /* margin: 30px; */
+    text-align: center;
+}
+#game-controls {
+    font-family: 'Fira Code', monospace;
+}
+#easy-puzzle:hover {
+    background-color: #4c9633;
+}
+#medium-puzzle:hover {
+    background-color: #d8a42c;
+}
+#hard-puzzle:hover {
+    background-color: #c24332;
+}
+#sassy-puzzle:hover {
+    background-image: linear-gradient(140deg,#d04d3d,#2973fc,#58a53f,#e8b63f);
+}
+#help-container {
+    display: flex;
+    align-items: center;
+    /* justify-content:; */
+    flex-direction: row;
+}
+#github-fork {
+    display: block;
+    position:fixed;
+    top: 0;
+    right: 0;
+}
+#lance-newby {
+    display: flex;
+    position:fixed;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+}
+#lance-newby > img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+#lance-newby > .full-name {
+    font-family: 'Fira Code', monospace;
+    font-weight: bolder;
+    font-size: 1.1em;
+    text-decoration: none;
+    color:darkgrey;
+    margin-left: 20px;
+}
+#lance-newby > .full-name:hover {
+    color: pink;
+}
+#lance-link {
+    color: white;
+}
+#lance-link:hover {
+    color: pink;
+}
+#footer {
+    background-color: #939393;
+    color:floralwhite;
+    margin-top: 40px;  
+}
+#mobile-device-msg {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+}
+
+/****************
+ * Class styles
+ ****************/
+.container {
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 64, 138);
+}
+.row {
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+.col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Shadows Into Light', cursive;  
+}
+.col > button {
+    justify-content: left;
+}
+.easy-puzzle {
+    color: #fff;
+    background-color: #58a53f;
+}
+.medium-puzzle {
+    color: #fff;
+    background-color: #e8b63f;
+}
+.hard-puzzle {
+    color: #fff;
+    background-color: #d04d3d;
+}
+.sassy-puzzle {
+    color: #fff;
+    background-image: linear-gradient(140deg,#cf766b,#6fa0fa,#79a06c,#e9c777);
+}
+.selected-sort-btn {
+    color: #fff;
+    background-color: #3786fd;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #github-fork {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        padding: 0;
+    }
+}

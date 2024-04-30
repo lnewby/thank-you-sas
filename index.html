@@ -1,114 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146041533-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-146041533-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WV8H5F7');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#x1F497;&#x1F499;&#x1F49A;&#x1F49B; Thank you, SAS!</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-        }
-        .container {
-            font-family: 'Shadows Into Light', cursive;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            color: rgb(0, 64, 138);
-        }
-        #game-canvas {
-            border:1px solid #0a80ff;
-        }
-        #brief-msg {
-            /* font-size: 1.2em; */
-            width: 600px;
-            /* margin: 30px; */
-            text-align: center;
-        }
-        #game-controls {
-            font-family: 'Fira Code', monospace;
-        }
-        .row {
-            display: flex;
-            align-items:flex-start;
-            justify-content:space-evenly;
-            flex-direction: row;
-            width: 100%;
-        }
-        .col {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-direction: column;
-            font-family: 'Shadows Into Light', cursive;  
-        }
-        .col > button {
-            justify-content: left;
-        }
-        #easy-puzzle:hover {
-            background-color: #58a53f;
-        }
-        #medium-puzzle:hover {
-            background-color: #e8b63f;
-        }
-        #hard-puzzle:hover {
-            background-color: #d04d3d;
-        }
-        #help-container {
-            display: flex;
-            align-items: center;
-            /* justify-content:; */
-            flex-direction: row;
-        }
-        .easy-puzzle {
-            color: #fff;
-            background-color: #58a53f;
-        }
-        .medium-puzzle {
-            color: #fff;
-            background-color: #e8b63f;
-        }
-        .hard-puzzle {
-            color: #fff;
-            background-color: #d04d3d;
-        }
-        .selected-sort-btn {
-            color: #fff;
-            background-color: #3786fd;
-        }
-        button:hover {
-            color: #fff;
-            background-color: #3786fd;
-        }
-        button {
-            font-family: 'Fira Code', monospace;
-            /* color: #fff; */
-            background-color: transparent;
-            margin: .25rem .125rem;
-            cursor: pointer;
-            display: inline-block;
-            font-weight: 400;
-            line-height: 1.5;
-            text-align: center;
-            text-decoration: none;
-            vertical-align: middle;
-            border: 1px solid transparent;
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            border-radius: .25rem;
-            /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
-        }
-    </style>
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 <body onload="startGame()">
-    <div class="container">
-        <h1>Thank you, <span style="color: #4e81e6;">SAS</span>!</h1>
-        <div class="col">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV8H5F7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a id="github-fork" href="https://github.com/lnewby/thank-you-sas/tree/gh-pages"><img loading="lazy" width="149" height="149" src="img/forkme_right_white_ffffff.png" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    <a id="lance-newby" href="https://lancenewby.com"><img loading="lazy" src="https://s.gravatar.com/avatar/1c94c8d277fc3fc3b5e9cfd9567040be?s=200%27)" alt="Lance Newby's portfolio" data-recalc-dims="1"><span class="full-name">Lance Newby</span></a>
+    
+    <div id="mobile-device-msg" class="hidden">
+        Best experienced in Google Chrome desktop browser!
+    </div>
+
+    </div>
+    <div id="main" class="container">
+        <div class="row">
+            <h1>Thank you, <span style="color: #4e81e6;">SAS</span>!</h1>
+        </div>
+
+        <div class="row">
             <h3 id="brief-msg">As a thank you for supporting me and so many SAS candidates, take a moment... breathe... and enjoy this simple Slider Puzzle made with care just for you.</h3>
         </div>
 
@@ -125,14 +61,19 @@
                 <button id="easy-puzzle">EASY</button>
                 <button id="medium-puzzle" class="medium-puzzle">MEDIUM</button>
                 <button id="hard-puzzle">HARD</button>
+                <button id="sassy-puzzle">SASSY</button>
             </div>
 
             <div class="col">
                 <h3>Need help? Select an algorithm to sort things out.</h3>
-                <button id="bubble-btn">BUBBLESORT</button>
+                
                 <button id="selection-btn">SELECTION SORT</button>
-                <button id="quick-btn">QUICKSORT</button>
                 <button id="insertion-btn">INSERTION SORT</button>
+                <button id="bubble-btn">BUBBLE SORT</button>
+                <button id="merge-btn">MERGESORT</button>
+                <button id="quick-btn">QUICKSORT</button>
+                <button style="display: none;" id="heap-btn">HEAPSORT</button>
+                
             </div>
 
             <div class="col">
@@ -140,9 +81,12 @@
                 <button id="hint-btn">SEE SOLUTION</button>
             </div>
         </div>
+        <div id="footer" class="row">
+            <p>Made with &#x1F49A; by <a id="lance-link" href="https://lancenewby.com">Lance Newby</a>!</p>
+        </div>
     </div>
-
-    <img id="sprite" src="Sas.png" style="height:0px; width:0px;">
-    <script src="game.js"></script>
+    
+    <img id="sprite" src="img/Sas.png" style="height:0px; width:0px;">
+    <script src="js/game.js"></script>
 </body>
 </html>
